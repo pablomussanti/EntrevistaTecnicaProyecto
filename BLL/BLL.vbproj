@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="BLLCustomer.vb" />
     <Compile Include="BLLOrder.vb" />
+    <Compile Include="BLLProduct.vb" />
     <Compile Include="BLLPrueba.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

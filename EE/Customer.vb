@@ -1,5 +1,14 @@
 ﻿Public Class Customer
-    Inherits Entidad
+
+    Private _CustomerID As String
+    Public Property CustomerID() As String
+        Get
+            Return _CustomerID
+        End Get
+        Set(ByVal value As String)
+            _CustomerID = value
+        End Set
+    End Property
 
     Private _CompanyName As String
     Public Property CompanyName() As String

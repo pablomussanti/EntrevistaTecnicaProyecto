@@ -2,9 +2,9 @@
 Imports MPP
 Public Class BLLOrder
 
-    Public Function TraerOrden(order As Order) As Order
+    Public Function VerificarExistencia(order As Order) As Order
         Dim oMPP As New MPPOrder
-        Return oMPP.TraerOrden(order)
+        Return oMPP.VerificarExistencia(order)
     End Function
 
 End Class

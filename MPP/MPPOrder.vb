@@ -1,7 +1,7 @@
 ﻿Imports EE
 Imports DAL
 Public Class MPPOrder
-    Public Function TraerOrden(order As Order) As Order
+    Public Function VerificarExistencia(order As Order) As Order
 
         Dim oDatos As New Datos
         Dim DS As New DataSet
@@ -23,7 +23,7 @@ Public Class MPPOrder
 
             Return nuevoDato
         Else
-            Return Nothing
+            Return nuevoDato
         End If
     End Function
 End Class

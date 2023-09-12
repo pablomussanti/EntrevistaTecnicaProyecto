@@ -40,8 +40,8 @@ Partial Class Menu
         '
         Me.AlgoToolStripMenuItem.AutoSize = False
         Me.AlgoToolStripMenuItem.Name = "AlgoToolStripMenuItem"
-        Me.AlgoToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.AlgoToolStripMenuItem.Text = "Algo"
+        Me.AlgoToolStripMenuItem.Size = New System.Drawing.Size(122, 20)
+        Me.AlgoToolStripMenuItem.Text = "Test ABM"
         '
         'Menu
         '

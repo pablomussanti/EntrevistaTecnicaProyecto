@@ -46,6 +46,8 @@ Public Class Prueba
 
             Enlazar()
 
+            MessageBox.Show("Region Creada/Modificada")
+
         Catch ex As Exception
             MessageBox.Show(String.Format("Creacion/Modificacion Fallida, {0}", ex.Message))
         End Try
@@ -64,6 +66,9 @@ Public Class Prueba
             End If
 
             Enlazar()
+
+            MessageBox.Show("Region Eliminada")
+
 
         Catch ex As Exception
             MessageBox.Show(String.Format("Eliminacion Fallida, {0}", ex.Message))

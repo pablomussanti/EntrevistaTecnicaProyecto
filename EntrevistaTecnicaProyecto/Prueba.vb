@@ -34,7 +34,7 @@ Public Class Prueba
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
             Dim oRegion As New Region
-
+            'Como la entidad no tiene un campo id autoincremental, produce error al querer crear un nuevo campo por lo que se tendria que realizar por id manual
             If TextBox1.Text = "" Then
                 oRegion.RegionDescription = TextBox2.Text
                 region.CrearRegion(oRegion)

@@ -64,7 +64,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customer.vb" />
     <Compile Include="Entidad.vb" />
+    <Compile Include="Order.vb" />
+    <Compile Include="Product.vb" />
     <Compile Include="Region.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

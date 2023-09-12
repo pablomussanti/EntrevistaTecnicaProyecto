@@ -6,4 +6,10 @@ Public Class Menu
         ventana.MdiParent = Me
         ventana.Show()
     End Sub
+
+    Private Sub OrdenesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrdenesToolStripMenuItem.Click
+        Dim ventana As New Orden
+        ventana.MdiParent = Me
+        ventana.Show()
+    End Sub
 End Class

@@ -1,7 +1,7 @@
 ﻿Imports EE
 Imports DAL
 Public Class MPPOrder
-    Public Function VerificarExistencia(order As Order) As Order
+    Public Function VerificarExistencia(orden As Order) As Order
 
         Dim oDatos As New Datos
         Dim DS As New DataSet
@@ -9,7 +9,7 @@ Public Class MPPOrder
         Dim nuevoDato As New Order
         Dim hdatos As New Hashtable
 
-        hdatos.Add("@orderid", order.Id)
+        hdatos.Add("@orderid", orden.Id)
 
         DS = oDatos.Leer("s_Order_Traer", hdatos)
 

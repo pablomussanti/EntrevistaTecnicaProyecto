@@ -3,19 +3,28 @@ Imports BLL
 Imports System.Text.RegularExpressions
 Public Class Orden
     Dim BLLOrder As New BLLOrder
+    Dim BLLCustomer As New BLLCustomer
     Private Sub Orden_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        enlazar()
     End Sub
 
-    Public Sub enlazar()
+    Public Sub enlazarCustomers(orden As Order)
         Me.DataGridView1.DataSource = Nothing
-
+        Me.DataGridView1.DataSource = BLLCustomer.TraerCustomers(orden)
+        Me.DataGridView1.Columns(1).Visible = False
+        Me.DataGridView1.Columns(2).Visible = False
+        Me.DataGridView1.Columns(4).Visible = False
+        Me.DataGridView1.Columns(5).Visible = False
+        Me.DataGridView1.Columns(6).Visible = False
+        Me.DataGridView1.Columns(7).Visible = False
+        Me.DataGridView1.Columns(8).Visible = False
+        Me.DataGridView1.Columns(9).Visible = False
+        Me.DataGridView1.Columns(10).Visible = False
     End Sub
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
-            Dim order As New Order
+            Dim orden As New Order
 
             Dim verificador As Boolean = Regex.IsMatch(TxtCodigo.Text, "^([0-9]+$)")
 
@@ -23,16 +32,18 @@ Public Class Orden
                 MsgBox("Numero de Orden: Se escribio un texto", MsgBoxStyle.Information, "VALIDACION ERROR")
                 Exit Sub
             Else
-                order.Id = TxtCodigo.Text
+                orden.Id = TxtCodigo.Text
             End If
 
-            If BLLOrder.VerificarExistencia(order).Id = 0 Then
+            If BLLOrder.VerificarExistencia(orden).Id = 0 Then
 
                 MessageBox.Show(String.Format("Orden no valida, la orden {0} no existe", TxtCodigo.Text))
 
             Else
 
                 MessageBox.Show(String.Format("Orden valida, orden seleccionada {0}", TxtCodigo.Text))
+
+                enlazarCustomers(orden)
 
             End If
 

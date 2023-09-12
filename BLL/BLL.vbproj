@@ -64,6 +64,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLLCustomer.vb" />
     <Compile Include="BLLOrder.vb" />
     <Compile Include="BLLPrueba.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
